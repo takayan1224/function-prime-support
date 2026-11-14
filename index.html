@@ -2,781 +2,86 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>function Pop｜数式を、育てよう。微分積分パズル</title>
-<meta name="description" content="x を掛けて、1 を足して、微分して、収穫。関数そのものを育てて得点に変える、ふわふわ微分積分パズル「function Pop（ファンクションポップ）」。iPhone で無料。">
-<meta name="theme-color" content="#f8f7f3">
-<meta property="og:type" content="website">
-<meta property="og:title" content="function Pop｜数式を、育てよう。">
-<meta property="og:description" content="微分すると、ぜんぶのマスが変わる。関数を育てて得点に変える、ふわふわ微分積分パズル。iPhone で無料。">
-<meta property="og:url" content="https://takayan1224.github.io/function-prime-support/">
-<meta property="og:image" content="https://takayan1224.github.io/function-prime-support/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="icon.png">
-<link rel="apple-touch-icon" href="icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>function Pop サポート</title>
+<meta name="description" content="function Pop（微分と積分で遊ぶパズルゲーム）のサポートページです。遊び方、よくある質問、お問い合わせ先を掲載しています。">
 <style>
-@font-face{font-family:"KMain";src:url(https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/fonts/KaTeX_Main-Regular.woff2) format("woff2");font-display:swap}
-@font-face{font-family:"KMath";src:url(https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/fonts/KaTeX_Math-Italic.woff2) format("woff2");font-display:swap}
-:root{
-  color-scheme:light;
-  --bg:#f8f7f3;--paper:#fff;--ink:#292c2b;--muted:#73776f;--line:#e7e6df;
-  --accent:#9582b1;--deep:#5e4d77;--sage:#52604d;
-  --lav:#dfdaf1;--mint:#dfe8d9;--peach:#f2dfd1;--sky:#e0e7ed;--rose:#ece3e9;
-  --gold:#f5e2a8;--goldEdge:#d8a63f;
-  --r:28px;
-  --spring:cubic-bezier(.34,1.56,.64,1);
-}
+:root{--bg:#f8f7f3;--ink:#292c2b;--muted:#6f7569;--line:#e7e6df;--accent:#5e4d77;--lav:#dfdaf1;--sage:#dfe8d9;--peach:#f2dfd1;--sky:#e0e7ed}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{word-break:auto-phrase;margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic",-apple-system,"Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;font-weight:500;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;display:block}
-a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.m{font-family:"KMain",serif;font-style:normal;font-weight:400;white-space:nowrap}
-.m i{font-family:"KMath",serif;font-style:normal}
-.m sup{font-size:.62em;vertical-align:.72em;line-height:0;margin-left:.04em}
-.frac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1.05;margin:0 .08em}
-.frac>span:first-child{border-bottom:.06em solid currentColor;padding:0 .12em}
-.frac.sm{font-size:.62em}
-
-/* ---------- nav ---------- */
-.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
-.nav.solid{background:rgba(248,247,243,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Nunito",sans-serif;font-size:20px;font-weight:700;letter-spacing:-.3px}
-.brand img{width:36px;height:36px;border-radius:10px;box-shadow:0 2px 8px rgba(94,77,119,.15)}
-.brand b{color:var(--accent);font-weight:800}
-.navlinks{display:flex;align-items:center;gap:26px;font-size:14px}
-.navlinks a{text-decoration:none;color:var(--muted)}
-.navlinks a:hover{color:var(--ink)}
-@media (max-width:760px){.navlinks a:not(.btn){display:none}}
-
-/* ---------- buttons ---------- */
-.btn{display:inline-flex;align-items:center;gap:12px;text-decoration:none;border:0;cursor:pointer;font:inherit}
-.store{background:var(--ink);color:#fff;border-radius:18px;padding:12px 24px 12px 18px;box-shadow:0 10px 24px -10px rgba(41,44,43,.55);transition:transform .25s var(--spring),box-shadow .25s}
-.store:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 30px -12px rgba(41,44,43,.55)}
-.store .ico{width:34px;height:34px;border-radius:9px;background:#fff url(icon.png) center/cover}
-.store small{display:block;font-size:11px;opacity:.7;line-height:1.2;letter-spacing:.04em}
-.store strong{display:block;font-size:17px;line-height:1.3;font-weight:700}
-.store.sm{padding:7px 16px 7px 8px;border-radius:14px;gap:8px;font-size:14px;color:#fff}
-.store.sm .ico{width:26px;height:26px;border-radius:7px}
-.ghost{color:var(--deep);font-weight:700;font-size:15px;padding:14px 6px}
-.ghost span{display:inline-block;transition:transform .25s var(--spring)}
-.ghost:hover span{transform:translateY(3px)}
-
-/* ---------- hero ---------- */
-.hero{position:relative;padding:118px 0 70px;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 14px 5px 6px;font-size:13px;color:var(--deep);font-weight:700}
-.eyebrow i{font-style:normal;background:var(--lav);border-radius:999px;padding:1px 10px;font-size:12px}
-h1{font-size:clamp(48px,7.4vw,92px);line-height:1.12;letter-spacing:-.02em;margin:22px 0 22px;font-weight:900}
-h1 .pop{display:inline-block;color:var(--deep)}
-h1 .ch{display:inline-block;opacity:0;transform:translateY(.4em) scale(.7);animation:ch .7s var(--spring) forwards}
-@keyframes ch{to{opacity:1;transform:none}}
-.lead{font-size:clamp(16px,1.6vw,18px);color:var(--muted);max-width:30em;margin:0 0 34px}
-.lead .m{color:var(--ink);font-size:1.12em}
-.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
-.meta{display:flex;gap:18px;margin-top:26px;font-size:13px;color:var(--muted);flex-wrap:wrap}
-.meta span::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:7px;vertical-align:1px}
-
-.stage{position:relative;height:640px;display:grid;place-items:center}
-.blob{position:absolute;border-radius:46% 54% 58% 42%/51% 43% 57% 49%;animation:morph 14s ease-in-out infinite}
-@keyframes morph{0%,100%{border-radius:46% 54% 58% 42%/51% 43% 57% 49%}33%{border-radius:58% 42% 44% 56%/44% 58% 42% 56%}66%{border-radius:42% 58% 52% 48%/58% 44% 56% 42%}}
-.stage .b1{width:430px;height:430px;background:var(--lav);top:70px;left:50%;margin-left:-215px}
-.stage .b2{width:170px;height:170px;background:var(--mint);bottom:40px;left:2%;animation-delay:-4s}
-.stage .b3{width:120px;height:120px;background:var(--peach);top:30px;right:4%;animation-delay:-8s}
-.phone{position:relative;width:282px;aspect-ratio:886/1920;border-radius:48px;background:#1f2120;padding:9px;box-shadow:0 40px 70px -30px rgba(60,48,80,.45),0 0 0 1px rgba(0,0,0,.05);z-index:2}
-.phone video,.phone img{width:100%;height:100%;object-fit:cover;border-radius:40px;background:var(--bg)}
-.phone::after{content:"";position:absolute;top:19px;left:50%;width:84px;height:24px;margin-left:-42px;background:#1f2120;border-radius:20px}
-.float{position:absolute;z-index:3;background:#fff;border-radius:18px;display:grid;place-items:center;font-size:30px;box-shadow:0 16px 30px -16px rgba(60,48,80,.35),0 0 0 1px rgba(0,0,0,.03);animation:bob 6s ease-in-out infinite;will-change:transform}
-@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--rot,0deg))}50%{transform:translateY(-14px) rotate(calc(var(--rot,0deg) * -1))}}
-.f1{width:76px;height:92px;top:96px;left:3%;--rot:-8deg}
-.f2{width:84px;height:100px;bottom:120px;right:0;--rot:7deg;animation-delay:-2s;background:var(--peach)}
-.f3{width:70px;height:84px;bottom:40px;left:12%;--rot:5deg;animation-delay:-3.5s}
-.f4{width:72px;height:88px;top:190px;right:2%;--rot:-6deg;animation-delay:-1s}
-.rare{background:linear-gradient(135deg,#f3eefb,#fbefe6 55%,#eaf3ec);position:relative;overflow:hidden}
-.rare::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:conic-gradient(#c9b8e6,#f0c9a8,#a9d2b4,#c9b8e6);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
-.rare::after{content:"";position:absolute;top:-50%;left:-80%;width:50%;height:200%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.9),transparent);transform:rotate(20deg);animation:shine 3.6s ease-in-out infinite}
-@keyframes shine{0%,55%{left:-80%}85%,100%{left:140%}}
-.heroBird{position:absolute;z-index:4;top:26px;left:-3%;animation:hover 3.2s ease-in-out infinite}
-@keyframes hover{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-12px)}}
-
-/* ---------- bird ---------- */
-.bird{pointer-events:none}
-.bird .in{position:absolute;left:0;top:0;width:370px;height:185px;transform-origin:0 0}
-.bird img{position:absolute;max-width:none}
-.bird .carry{position:absolute;left:338px;top:58px;width:64px;height:76px;background:#fff;border-radius:14px;display:grid;place-items:center;font-size:40px;box-shadow:0 6px 14px -6px rgba(0,0,0,.25);transform:rotate(12deg)}
-
-/* ---------- marquee ---------- */
-.marquee{border-block:1px solid var(--line);background:#fff;overflow:hidden;padding:18px 0}
-.track{display:flex;gap:56px;width:max-content;animation:scroll 38s linear infinite;font-size:26px;color:var(--deep);align-items:center}
-.track .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);opacity:.5}
-@keyframes scroll{to{transform:translateX(-50%)}}
-
-/* ---------- sections ---------- */
-section{padding:110px 0}
-.kicker{font-family:"Nunito",sans-serif;font-weight:800;letter-spacing:.18em;font-size:12px;color:var(--accent);text-transform:uppercase}
-h2{font-size:clamp(32px,4.4vw,52px);line-height:1.3;letter-spacing:-.01em;margin:12px 0 18px;font-weight:900}
-.sub{color:var(--muted);font-size:17px;margin:0;max-width:34em}
-.center{text-align:center}.center .sub{margin:0 auto}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s var(--spring)}
-.reveal.in{opacity:1;transform:none}
-
-/* ---------- demo ---------- */
-.demo-sec{background:linear-gradient(180deg,var(--bg),#f2eff7 40%,var(--bg))}
-.demo-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;margin-top:20px}
-.howto{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
-.howto li{display:flex;gap:14px;align-items:center;background:#fff;border-radius:18px;padding:12px 16px;border:1px solid #efeee8;font-size:15px}
-.howto .k{flex:none;width:46px;height:52px;border-radius:12px;display:grid;place-items:center;background:var(--bg);font-size:22px}
-.board{position:relative;background:var(--paper);border-radius:36px;padding:26px 22px 22px;box-shadow:0 30px 60px -36px rgba(60,48,80,.4),0 0 0 1px #efeee8;max-width:470px;margin:0 auto;width:100%;user-select:none;-webkit-user-select:none}
-.bhead{display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.2em;color:var(--muted);font-family:"Nunito",sans-serif;font-weight:700}
-.bhead b{font-size:17px;color:var(--ink);letter-spacing:.05em;margin-left:6px}
-.score{position:relative;height:112px;display:grid;place-items:center;margin:4px 0 2px}
-.score .blob{width:120px;height:104px;background:#efede6}
-.score span{position:relative;font-family:"Nunito",sans-serif;font-weight:700;font-size:50px;letter-spacing:-.02em}
-.fx{text-align:center;font-size:21px;min-height:40px;margin:2px 0 14px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.slot{position:relative;aspect-ratio:1/.92;border-radius:22px;display:grid;place-items:center;text-align:center;padding:4px;cursor:pointer;transition:box-shadow .2s,background .3s;line-height:1.25;font-size:22px;overflow:hidden}
-.slot.empty{border:1.5px dashed #d9d8d0;background:transparent}
-.slot.empty::after{content:"·";color:#c9c8c0}
-.slot.target{box-shadow:0 0 0 3px #fff,0 0 0 5px var(--accent);}
-.slot.gold{background:var(--gold)!important;box-shadow:inset 0 0 0 2px var(--goldEdge)}
-.slot.gold.target{box-shadow:inset 0 0 0 2px var(--goldEdge),0 0 0 3px #fff,0 0 0 5px var(--accent)}
-.badge10{position:absolute;top:-4px;right:-4px;width:40px;height:40px;z-index:2;pointer-events:none;animation:pop .6s var(--spring)}
-.slotwrap{position:relative}
-.vals{display:flex;justify-content:center;gap:28px;font-size:15px;color:var(--muted);margin:14px 0 18px}
-.vals .m{font-size:17px}.vals b{font-family:"Nunito",sans-serif;color:var(--ink);font-weight:700;margin-left:4px}
-.hand{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.card{position:relative;aspect-ratio:.8;border-radius:22px;background:#fff;box-shadow:0 5px 0 #ecebe4,0 0 0 1px #ecebe4;display:grid;place-items:center;font-size:36px;cursor:pointer;transition:transform .3s var(--spring),box-shadow .2s,background .2s}
-.card:hover{transform:translateY(-4px)}
-.card.sel{background:var(--lav);transform:translateY(-10px) rotate(-3deg);box-shadow:0 6px 0 #cfc6e6}
-.card.g{background:#f4e8de;box-shadow:0 5px 0 #e7d6c8}
-.card.h{background:#e6eddf;box-shadow:0 5px 0 #d4dfcb}
-.card .tag{position:absolute;bottom:8px;font-size:11px;color:var(--muted);font-family:"Zen Maru Gothic",sans-serif}
-.card.deal{animation:deal .5s var(--spring)}
-@keyframes deal{from{transform:translateY(40px) scale(.6);opacity:0}}
-.boing{animation:boing .55s var(--spring)}
-@keyframes boing{0%{transform:scale(1)}30%{transform:scale(1.14,.9)}60%{transform:scale(.95,1.06)}100%{transform:scale(1)}}
-@keyframes pop{from{transform:scale(0) rotate(-40deg)}}
-.toast{position:absolute;left:50%;top:22px;transform:translate(-50%,10px) scale(.9);background:var(--ink);color:#fff;padding:9px 18px;border-radius:999px;font-size:14px;font-weight:700;opacity:0;transition:.35s var(--spring);pointer-events:none;white-space:nowrap;z-index:6}
-.toast.on{opacity:1;transform:translate(-50%,0) scale(1)}
-.hint{text-align:center;font-size:13px;color:var(--muted);margin-top:14px;min-height:1.6em}
-.flyBird{position:absolute;z-index:5;left:0;top:0}
-.dropX{position:absolute;z-index:4;width:40px;height:48px;border-radius:10px;background:#fff;display:grid;place-items:center;font-size:26px;box-shadow:0 6px 14px -6px rgba(0,0,0,.25)}
-.over{position:absolute;inset:0;border-radius:36px;background:rgba(255,255,255,.93);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:none;place-items:center;text-align:center;padding:30px;z-index:8}
-.over.on{display:grid;animation:fade .4s}
-@keyframes fade{from{opacity:0}}
-.over .big{font-family:"Nunito",sans-serif;font-size:64px;font-weight:800;line-height:1;margin:6px 0 10px}
-.over p{margin:0 0 20px;color:var(--muted);font-size:15px}
-.over .again{background:none;border:0;color:var(--deep);font:inherit;font-weight:700;margin-top:14px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
-
-/* ---------- rules ---------- */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
-.step{background:#fff;border-radius:var(--r);padding:30px 28px 32px;border:1px solid #efeee8;position:relative;overflow:hidden}
-.step .no{font-family:"Nunito",sans-serif;font-weight:800;font-size:13px;color:var(--accent);letter-spacing:.14em}
-.step h3{font-size:24px;margin:6px 0 8px;font-weight:900}
-.step p{color:var(--muted);margin:0;font-size:15px}
-.viz{height:150px;margin:-6px -6px 22px;border-radius:20px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:26px}
-.viz .t{background:#fff;border-radius:14px;padding:8px 14px;box-shadow:0 6px 14px -10px rgba(0,0,0,.3)}
-.viz .arrow{font-family:"Nunito";color:var(--accent);font-size:22px;font-weight:800}
-.dilemma{margin-top:22px;border-radius:var(--r);background:var(--ink);color:#fff;padding:40px 44px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
-.dilemma h3{font-size:clamp(22px,2.8vw,32px);margin:0 0 6px;font-weight:900;line-height:1.4}
-.dilemma p{margin:0;color:#c9ccc4}
-.dilemma .tiles{display:flex;gap:10px}
-.dilemma .tiles div{width:78px;height:72px;border-radius:18px;display:grid;place-items:center;color:var(--ink);font-size:20px}
-.dilemma .tiles .gone{outline:2px dashed #e7a487;outline-offset:3px;animation:wob 2.2s ease-in-out infinite}
-@keyframes wob{0%,100%{transform:rotate(0)}20%{transform:rotate(-4deg)}40%{transform:rotate(4deg)}60%{transform:rotate(0)}}
-
-/* ---------- surprises ---------- */
-.sp{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
-.sp article{border-radius:var(--r);padding:30px;min-height:380px;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.sp h3{font-size:24px;margin:auto 0 6px;font-weight:900}
-.sp p{margin:0;color:#5f6359;font-size:15px}
-.sp .pct{position:absolute;top:22px;right:24px;font-family:"Nunito",sans-serif;font-weight:800;font-size:12px;letter-spacing:.1em;color:rgba(0,0,0,.4)}
-.mystery .q{width:120px;height:120px;margin:34px auto 0;border-radius:46% 54% 58% 42%/51% 43% 57% 49%;background:rgba(255,255,255,.7);display:grid;place-items:center;font-family:"Nunito",sans-serif;font-weight:800;font-size:60px;color:var(--accent);animation:morph 10s ease-in-out infinite,bob 5s ease-in-out infinite}
-.rareRow{display:flex;justify-content:center;gap:12px;margin-top:34px}
-.rareRow .rare{width:78px;height:96px;border-radius:18px;display:grid;place-items:center;font-size:28px}
-.rareRow .rare:nth-child(2){transform:translateY(-14px)}
-.rareRow .rare:nth-child(2)::after{animation-delay:.5s}.rareRow .rare:nth-child(3)::after{animation-delay:1s}
-
-/* ---------- screens ---------- */
-.shots{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;padding:50px 24px 30px;margin:0 -24px;scrollbar-width:none}
-.shots::-webkit-scrollbar{display:none}
-.shots figure{flex:none;margin:0;scroll-snap-align:center;text-align:center}
-.shots .phone{width:230px}
-.shots figcaption{margin-top:16px;font-size:14px;color:var(--muted);font-weight:700}
-.shots figure:nth-child(even){transform:translateY(30px)}
-
-/* ---------- who ---------- */
-.who{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
-.who>div{background:#fff;border-radius:var(--r);padding:28px;border:1px solid #efeee8}
-.who .em{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-size:30px;line-height:1;margin-bottom:16px}
-.who .em>span{display:inline-block}
-.who h3{margin:0 0 6px;font-size:19px;font-weight:900}
-.who p{margin:0;color:var(--muted);font-size:15px}
-
-/* ---------- ranking ---------- */
-.rank{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center}
-.rank .phone{width:250px;transform:rotate(4deg)}
-.board-list{list-style:none;padding:0;margin:30px 0 0;max-width:420px}
-.board-list li{display:flex;align-items:center;gap:14px;background:#fff;border-radius:16px;padding:12px 18px;margin-bottom:10px;border:1px solid #efeee8;font-size:15px}
-.board-list .n{font-family:"Nunito";font-weight:800;width:24px;color:var(--accent)}
-.board-list .s{margin-left:auto;font-family:"Nunito";font-weight:700}
-.board-list li.you{background:var(--lav);border-color:transparent}
-
-/* ---------- final ---------- */
-.final{position:relative;text-align:center;padding:140px 0 150px;overflow:hidden}
-.final .blob{width:620px;height:560px;background:var(--lav);left:50%;top:50%;margin:-280px 0 0 -310px;opacity:.75}
-.final .wrap{position:relative}
-.final img.icon{width:112px;height:112px;border-radius:28px;margin:0 auto 26px;box-shadow:0 20px 40px -20px rgba(94,77,119,.5)}
-.final h2{font-size:clamp(36px,5.4vw,64px)}
-.final .store{margin-top:26px}
-.final .sub{margin:0 auto}
-.finalBird{position:absolute;right:14%;top:150px;animation:hover 3.6s ease-in-out infinite}
-
-footer{border-top:1px solid var(--line);padding:40px 0 60px;font-size:13px;color:var(--muted)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
-footer a{color:var(--muted);text-decoration:none;margin-right:20px}
-footer a:hover{color:var(--ink)}
-footer .thanks{font-family:"Nunito",sans-serif;letter-spacing:.04em}
-
-/* ---------- sticky mobile CTA ---------- */
-.sticky{position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:60;display:none;transform:translateY(140%);transition:transform .45s var(--spring)}
-.sticky.on{transform:none}
-.sticky .store{width:100%;justify-content:center}
-
-@media (max-width:900px){
-  .hero{padding-top:96px}
-  .hero .wrap,.demo-grid,.rank{grid-template-columns:1fr}
-  .hero .copy{text-align:center}.lead{margin-inline:auto}.cta-row,.meta{justify-content:center}
-  .stage{height:560px}
-  .steps,.sp,.who{grid-template-columns:1fr}
-  .sp article{min-height:330px}
-  .dilemma{grid-template-columns:1fr;padding:32px 26px}
-  .rank{text-align:center}.rank .sub,.board-list{margin-inline:auto}
-  .rank .phone{margin:0 auto}
-  .finalBird{display:none}
-  .sticky{display:block}
-  section{padding:84px 0}
-}
-@media (max-width:480px){
-  .wrap{padding:0 16px}
-  .stage{height:500px}
-  .phone{width:236px}
-  .stage .b1{width:330px;height:330px;margin-left:-165px}
-  .f1{left:0}.f4{right:-2%}
-  .board{padding:20px 14px 18px;border-radius:30px}
-  .slots{gap:7px}.slot{border-radius:18px}
-  .hand{gap:9px}
-  .heroBird{left:-4%}
-  .shots{margin:0 -16px;padding-inline:16px}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-  .reveal{opacity:1;transform:none}
-}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;line-height:1.85;font-size:15px}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px 60px}
+.hero{text-align:center;padding:56px 0 28px}
+.logo{width:120px;height:112px;margin:0 auto;display:grid;place-items:center;background:var(--lav);border-radius:46% 54% 58% 42%/51% 43% 57% 49%;font:italic 64px/1 "Times New Roman",Georgia,serif;color:var(--accent)}
+h1{font-size:34px;letter-spacing:-.5px;margin:22px 0 4px}
+h1 span{color:#9582b1;font-weight:700}
+.lead{color:var(--muted);margin:0}
+nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+nav a{padding:8px 16px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--accent);text-decoration:none;font-size:14px}
+section{background:#fff;border:1px solid #eeeee7;border-radius:24px;padding:22px 24px;margin-top:18px}
+h2{font-size:19px;margin:0 0 10px}
+h3{font-size:15px;margin:18px 0 4px}
+ul{padding-left:1.2em;margin:6px 0}
+li{margin:4px 0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 4px}
+.chips span{padding:4px 12px;border-radius:12px;font-family:"Times New Roman",Georgia,serif;font-style:italic}
+.c1{background:var(--lav)}.c2{background:var(--sage)}.c3{background:var(--peach)}.c4{background:var(--sky)}
+a{color:var(--accent)}
+.mail{display:inline-block;margin-top:6px;padding:10px 18px;border-radius:16px;background:var(--lav);text-decoration:none;font-weight:600}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:34px}
 </style>
 </head>
 <body>
-
-<header class="nav" id="nav">
-  <div class="wrap">
-    <a class="brand" href="#top"><img src="icon.png" alt="">function <b>Pop</b></a>
-    <nav class="navlinks">
-      <a href="#play">さわってみる</a>
-      <a href="#rules">あそびかた</a>
-      <a href="#surprise">ときどき</a>
-      <a href="#ranking">ランキング</a>
-      <a href="support.html">サポート</a>
-      <a class="btn store sm" href="https://apps.apple.com/jp/app/id6831983364" target="_blank" rel="noopener"><span class="ico"></span>無料ダウンロード</a>
-    </nav>
-  </div>
+<div class="wrap">
+<header class="hero">
+  <div class="logo" aria-hidden="true">f</div>
+  <h1>function <span>Pop</span></h1>
+  <p class="lead">微分と積分で遊ぶ、ふわふわパズル</p>
+  <nav>
+    <a href="#play">遊び方</a>
+    <a href="#faq">よくある質問</a>
+    <a href="#contact">お問い合わせ</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="https://takayan1224.github.io/function-pop/">公式サイト</a>
+  </nav>
 </header>
 
-<main id="top">
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="wrap">
-    <div class="copy">
-      <span class="eyebrow"><i>NEW</i>微分と積分で遊ぶ、ふわふわパズル</span>
-      <h1 id="h1" aria-label="数式を、育てよう。">数式を、<br><span class="pop">育てよう。</span></h1>
-      <p class="lead"><span class="m"><i>x</i></span> を掛けて、<span class="m">1</span> を足して、微分して、収穫。<br>関数そのものを育てて得点に変える、<wbr>ちょっと頭を使う新感覚パズル。</p>
-      <div class="cta-row">
-        <a class="btn store" href="https://apps.apple.com/jp/app/id6831983364" target="_blank" rel="noopener"><span class="ico"></span><span><small>iPhone で無料</small><strong>App Store でダウンロード</strong></span></a>
-        <a class="btn ghost" href="#play">ここで1分あそぶ <span>↓</span></a>
-      </div>
-      <div class="meta"><span>無料・広告なし</span><span>1プレイ数分</span><span>今週のランキング</span></div>
-    </div>
-    <div class="stage" aria-hidden="true">
-      <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-      <div class="phone"><video src="play.mp4" poster="poster.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
-      <div class="float f1 m"><i>x</i></div>
-      <div class="float f2 m"><span class="frac"><span><i>d</i></span><span><i>dx</i></span></span></div>
-      <div class="float f3 m rare"><span><i>x</i><sup>2</sup></span></div>
-      <div class="float f4 m"><span><i>f</i>(1)</span></div>
-      <div class="heroBird" id="heroBird"></div>
-    </div>
-  </div>
+<section id="play">
+  <h2>遊び方</h2>
+  <div class="chips"><span class="c1">x²</span><span class="c2">1</span><span class="c3">e^x</span><span class="c4">sin x</span></div>
+  <ul>
+    <li>4つのマスに入った関数をぜんぶ足したものが f(x) です。最初は x と 1 から始まります。</li>
+    <li>毎ラウンド3枚のカードがランダムに配られます。好きな順番で使い、残りが1枚以下になったら → で次のラウンドへ進みます。</li>
+    <li><b>x</b>：1マスに x を掛けます（空きマスには x を置きます）。<b>1</b>：1マスに 1 を足します。</li>
+    <li><b>d/dx</b>：全部のマスをいっぺんに微分します。<b>∫</b>：選んだ1マスだけを積分します（積分定数は 0）。</li>
+    <li><b>f(1)・f(2)</b>：x に 1 または 2 を代入した全体の値が得点になります。そのかわり、値がいちばん大きいマスが1つ消えます。</li>
+    <li>使わないカードは、しおりマークで1枚だけ次のラウンドへ持ち越せます。</li>
+    <li>ときどき空きマスが<b>黄金マス</b>になります。黄金マスの値は10倍に数えます。小鳥が x を運んでくることも。</li>
+    <li>全部のマスが 0 になったらゲームオーバーです。ラウンドに終わりはありません。</li>
+  </ul>
+  <p>はじめて起動したときは、ルールを1つずつ体験できるチュートリアルが始まります。ホーム画面の「チュートリアル」からいつでも見直せます。</p>
 </section>
 
-<div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
-
-<!-- ================= DEMO ================= -->
-<section class="demo-sec" id="play">
-  <div class="wrap">
-    <div class="demo-grid">
-      <div class="reveal">
-        <div class="kicker">体験版</div>
-        <h2>TRY IT</h2>
-        <p class="sub">ブラウザでそのまま遊べる体験版です。12手で、どこまで得点をのばせるか。</p>
-        <ul class="howto">
-          <li><span class="k m"><i>x</i></span><span>カードを選んで、マスをタップ。<br><b>x を掛ける・1 を足す・積分する</b></span></li>
-          <li><span class="k m" style="background:#f4e8de"><span class="frac sm" style="font-size:.8em"><span><i>d</i></span><span><i>dx</i></span></span></span><span>タップするだけで、<b>全部のマスを微分</b>。</span></li>
-          <li><span class="k m" style="background:#e6eddf;font-size:17px"><span><i>f</i>(1)</span></span><span><b>収穫</b>して得点に。でも、いちばん大きいマスは消えてしまう。</span></li>
-        </ul>
-      </div>
-      <div class="board reveal" id="board">
-        <div class="bhead"><span>ROUND<b id="round">01</b></span><span>のこり<b id="left">12</b>手</span></div>
-        <div class="score"><div class="blob"></div><span id="score">0</span></div>
-        <div class="fx m" id="fx"></div>
-        <div class="slots" id="slots"></div>
-        <div class="vals"><span><span class="m"><i>f</i>(1) =</span><b id="v1">0</b></span><span><span class="m"><i>f</i>(2) =</span><b id="v2">0</b></span></div>
-        <div class="hand" id="hand"></div>
-        <div class="hint" id="hint">カードをえらんでね</div>
-        <div class="toast" id="toast"></div>
-        <div class="over" id="over">
-          <div>
-            <div class="kicker">Your score</div>
-            <div class="big" id="final">0</div>
-            <p>アプリでは、レアカードやときどき起きるうれしいこと、<br>そして終わりのないエンドレスが待っています。</p>
-            <a class="btn store" href="https://apps.apple.com/jp/app/id6831983364" target="_blank" rel="noopener"><span class="ico"></span><span><small>この続きは</small><strong>アプリで遊ぶ</strong></span></a>
-            <div><button class="again" id="again">もう一度あそぶ</button></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section id="faq">
+  <h2>よくある質問</h2>
+  <h3>ランキングに参加できません</h3>
+  <p>iPhone の「設定 → Game Center」でサインインしてください。ランキング用の名前を保存するには、iCloud へのサインインも必要です。</p>
+  <h3>ランキングの名前を変えたい</h3>
+  <p>ホーム →「ランキング」→「ランキングの名前を変える」から変更できます（10文字まで）。</p>
+  <h3>不適切な名前を見つけました</h3>
+  <p>ランキングでその名前を長押しし、「この名前を通報」を選んでください。運営が確認し、ふさわしくない名前は表示を消します。すぐに見えなくしたいときは「この人の名前を隠す」を選ぶと、あなたの画面でだけ隠れます。</p>
+  <h3>置けるカードがなくて進めません</h3>
+  <p>全部のマスが埋まっていて、残りのカードがどこにも置けないときは、→ でそのまま次のラウンドへ進めます。</p>
+  <h3>料金はかかりますか？</h3>
+  <p>無料です。アプリ内課金や広告はありません。</p>
 </section>
 
-<!-- ================= RULES ================= -->
-<section id="rules">
-  <div class="wrap">
-    <div class="center reveal">
-      <div class="kicker">How to play</div>
-      <h2>ルールは3つ。<br>悩みどころは、無限。</h2>
-      <p class="sub">4つのマスに入った関数を、ぜんぶ足したものが <span class="m"><i>f</i>(<i>x</i>)</span>。<br>カードで育てて、ちょうどいいときに収穫しよう。</p>
-    </div>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="viz m" style="background:var(--lav)"><span class="t"><i>x</i></span><span class="arrow">→</span><span class="t"><i>x</i><sup>2</sup></span><span class="arrow">→</span><span class="t"><i>x</i><sup>2</sup>+1</span></div>
-        <div class="no">01</div><h3>育てる</h3>
-        <p><span class="m"><i>x</i></span> を掛けて、<span class="m">1</span> を足して、ときには積分。マスの中の関数が、少しずつ大きくなっていく。</p>
-      </div>
-      <div class="step reveal" style="transition-delay:.1s">
-        <div class="viz m" style="background:var(--peach)"><span class="t"><i>x</i><sup>3</sup></span><span class="arrow">→</span><span class="t">3<i>x</i><sup>2</sup></span></div>
-        <div class="no">02</div><h3>微分する</h3>
-        <p>微分のカードは、<b>全部のマス</b>にいっぺんに効く。育てた式が一気に姿を変える、このゲームいちばんの見せ場。</p>
-      </div>
-      <div class="step reveal" style="transition-delay:.2s">
-        <div class="viz m" style="background:var(--mint)"><span class="t"><i>f</i>(1)</span><span class="arrow">=</span><span class="t" style="font-family:Nunito;font-weight:800">+356</span></div>
-        <div class="no">03</div><h3>収穫する</h3>
-        <p><span class="m"><i>f</i>(1)</span>・<span class="m"><i>f</i>(2)</span> のカードで、その値がそのまま得点に。全部のマスが 0 になったら、おしまい。</p>
-      </div>
-    </div>
-    <div class="dilemma reveal">
-      <div>
-        <h3>大きく育てるほど、<br>収穫が惜しくなる。</h3>
-        <p>収穫すると、いちばん大きいマスは消えてしまう。いま取るか、もっと育てるか。毎ラウンドが小さな決断です。</p>
-      </div>
-      <div class="tiles m" aria-hidden="true">
-        <div style="background:var(--lav)"><span><i>x</i><sup>2</sup>+1</span></div>
-        <div class="gone" style="background:var(--peach)"><span>3<i>x</i><sup>3</sup></span></div>
-        <div style="background:var(--mint)"><i>x</i></div>
-      </div>
-    </div>
-  </div>
+<section id="contact">
+  <h2>お問い合わせ</h2>
+  <p>不具合のご報告やご要望は、次のメールアドレスまでお送りください。お使いの iPhone の機種と iOS のバージョンを添えていただけると助かります。</p>
+  <a class="mail" href="mailto:tatatacica@yahoo.co.jp">tatatacica@yahoo.co.jp</a>
 </section>
 
-<!-- ================= SURPRISES ================= -->
-<section id="surprise" style="background:#fff">
-  <div class="wrap">
-    <div class="center reveal">
-      <div class="kicker">Surprises</div>
-      <h2>ときどき、<br>うれしいことが起きる。</h2>
-      <p class="sub">ラウンドの始まりは、ちょっとしたくじ引き。<br>くわしくは、アプリで確かめてみてください。</p>
-    </div>
-    <div class="sp">
-      <article class="reveal mystery" style="background:#fbf4de">
-        <div class="q">?</div>
-        <h3>ひみつ その1</h3>
-        <p>なにが起きるかは、遊んでからのお楽しみ。</p>
-      </article>
-      <article class="reveal" style="background:var(--rose);transition-delay:.1s">
-        <div class="rareRow m"><div class="rare"><span><i>x</i><sup>2</sup></span></div><div class="rare"><span><i>e</i><sup><i>x</i></sup></span></div><div class="rare"><span>sin <i>x</i></span></div></div>
-        <h3>レアカード</h3>
-        <p>キラッと光って配られる、<span class="m"><i>x</i><sup>2</sup></span>・<span class="m"><i>e</i><sup><i>x</i></sup></span>・<span class="m">sin <i>x</i></span>。引けたらラッキー。</p>
-      </article>
-      <article class="reveal mystery" style="background:var(--sky);transition-delay:.2s">
-        <div class="q">?</div>
-        <h3>ひみつ その2</h3>
-        <p>ラウンドの始まりに、ふいに訪れる何か。</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SCREENS ================= -->
-<section style="padding-bottom:70px">
-  <div class="wrap">
-    <div class="center reveal">
-      <div class="kicker">Screens</div>
-      <h2>ふわっと、やさしい見た目。</h2>
-      <p class="sub">数式は教科書と同じ組版で、くっきり美しく。パステルのマスに、関数が育っていきます。</p>
-    </div>
-    <div class="shots">
-      <figure><div class="phone"><img src="1_home.jpg" alt="ホーム画面" loading="lazy"></div><figcaption>ホーム</figcaption></figure>
-      <figure><div class="phone"><img src="2_play.jpg" alt="プレイ画面" loading="lazy"></div><figcaption>関数を育てる</figcaption></figure>
-      <figure><div class="phone"><img src="3_harvest.jpg" alt="収穫の画面" loading="lazy"></div><figcaption>収穫して得点に</figcaption></figure>
-      <figure><div class="phone"><img src="4_tutorial.jpg" alt="チュートリアル" loading="lazy"></div><figcaption>チュートリアルつき</figcaption></figure>
-      <figure><div class="phone"><img src="5_ranking.jpg" alt="ランキング" loading="lazy"></div><figcaption>今週のランキング</figcaption></figure>
-      <figure><div class="phone"><img src="6_result.jpg" alt="結果画面" loading="lazy"></div><figcaption>結果</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ================= WHO ================= -->
-<section style="padding-top:60px">
-  <div class="wrap">
-    <div class="center reveal">
-      <div class="kicker">For you</div>
-      <h2>教科書の外で、<br>微分積分に会おう。</h2>
-    </div>
-    <div class="who">
-      <div class="reveal"><div class="em m" style="background:var(--lav)"><span style="display:flex;font-size:.7em"><span class="frac" style="margin:0"><span><i>d</i></span><span><i>dx</i></span></span></span></div><h3>いま習っている高校生に</h3><p>「微分すると次数が1つ下がる」が、手ざわりでわかる。すき間時間の、いちばんゆるい復習。</p></div>
-      <div class="reveal" style="transition-delay:.1s"><div class="em m" style="background:var(--mint)"><span style="transform:translateY(1px)">∫</span></div><h3>むかし習った大人に</h3><p>あの頃の記号たちと、パズルとして再会。思い出しながら解くのが、意外と気持ちいい。</p></div>
-      <div class="reveal" style="transition-delay:.2s"><div class="em m" style="background:var(--peach)"><span style="transform:translate(-1px,3px)"><i>e</i><sup><i>x</i></sup></span></div><h3>数式をながめるのが好きな人に</h3><p>自分で育てた式が、きれいな組版で並ぶ。それだけで、ちょっとうれしい。</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= RANKING ================= -->
-<section id="ranking" style="background:linear-gradient(180deg,var(--bg),#f2eff7)">
-  <div class="wrap rank">
-    <div class="reveal">
-      <div class="kicker">Ranking</div>
-      <h2>今週の1位は、<br>だれだ。</h2>
-      <p class="sub">Game Center のランキングで、今週と全期間のハイスコアを競えます。表示名はゲーム用に自由に決められます。</p>
-      <ol class="board-list" aria-hidden="true">
-        <li><span class="n">1</span>ほいっぷ<span class="s">1.24×10<sup style="font-size:.6em">8</sup></span></li>
-        <li><span class="n">2</span>せきぶんマン<span class="s">8,402,117</span></li>
-        <li class="you"><span class="n">3</span>あなた<span class="s">？？？</span></li>
-      </ol>
-    </div>
-    <div class="reveal" style="transition-delay:.15s"><div class="phone"><img src="5_ranking.jpg" alt="ランキング画面" loading="lazy"></div></div>
-  </div>
-</section>
-
-<!-- ================= FINAL ================= -->
-<section class="final">
-  <div class="blob"></div>
-  <div class="finalBird" id="finalBird" aria-hidden="true"></div>
-  <div class="wrap reveal">
-    <img class="icon" src="icon.png" alt="function Pop のアイコン">
-    <h2>ポケットに、<br>微分積分を。</h2>
-    <p class="sub">function Pop（ファンクションポップ）は、iPhone で無料。</p>
-    <a class="btn store" href="https://apps.apple.com/jp/app/id6831983364" target="_blank" rel="noopener"><span class="ico"></span><span><small>iPhone で無料</small><strong>App Store でダウンロード</strong></span></a>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <div><a href="support.html">サポート・お問い合わせ</a><a href="support.html#faq">よくある質問</a><a href="privacy.html">プライバシーポリシー</a></div>
-    <div class="thanks">© 2026 function Pop</div>
-  </div>
-</footer>
-
-<div class="sticky" id="sticky"><a class="btn store" href="https://apps.apple.com/jp/app/id6831983364" target="_blank" rel="noopener"><span class="ico"></span><span><small>iPhone で無料</small><strong>App Store でダウンロード</strong></span></a></div>
-
-<script>
-(() => {
-const $ = s => document.querySelector(s);
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-/* ---------- headline letters ---------- */
-{
-  const h = $('#h1'); let k = 0;
-  const wrap = n => { if (n.nodeType === 3) { const f = document.createDocumentFragment();
-      for (const c of n.textContent) { const s = document.createElement('span'); s.className = 'ch'; s.textContent = c; s.style.animationDelay = (0.15 + k++ * 0.06) + 's'; s.setAttribute('aria-hidden','true'); f.appendChild(s); }
-      n.replaceWith(f); } else [...n.childNodes].forEach(wrap); };
-  [...h.childNodes].forEach(wrap);
-}
-
-/* ---------- nav / sticky ---------- */
-const nav = $('#nav'), sticky = $('#sticky');
-const onScroll = () => {
-  nav.classList.toggle('solid', scrollY > 20);
-  const nearEnd = innerHeight + scrollY > document.body.scrollHeight - 420;
-  sticky.classList.toggle('on', scrollY > 600 && !nearEnd);
-};
-addEventListener('scroll', onScroll, {passive:true}); onScroll();
-
-/* ---------- reveal ---------- */
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.15});
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-/* ---------- marquee ---------- */
-{
-  const items = ['<i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> + <i>x</i> + 1','<span class="frac sm" style="font-size:.7em"><span><i>d</i></span><span><i>dx</i></span></span> <i>x</i><sup>3</sup> = 3<i>x</i><sup>2</sup>','∫ <i>x</i> <i>dx</i> = <span class="frac sm" style="font-size:.7em"><span>1</span><span>2</span></span><i>x</i><sup>2</sup>','<i>f</i>(1) = 4','<i>e</i><sup><i>x</i></sup>','sin <i>x</i>','<i>x</i> · <i>x</i><sup>2</sup> = <i>x</i><sup>3</sup>'];
-  const one = items.map(t => `<span class="m">${t}</span><span class="dot"></span>`).join('');
-  $('#track').innerHTML = one + one;
-}
-
-/* ---------- burst badge ---------- */
-{
-  let d = ''; const n = 12;
-  for (let i = 0; i < n * 2; i++) { const r = i % 2 ? 21 : 30, a = Math.PI * i / n - Math.PI / 2; d += (i ? 'L' : 'M') + (r * Math.cos(a)).toFixed(1) + ' ' + (r * Math.sin(a)).toFixed(1); }
-  window.BURST = d + 'Z';
-}
-
-/* ---------- bird ---------- */
-const P = {
-  legs: {fly:[140,150,105,70], stand:[150,160,88,68]},
-  wing: {up:[135,-75,233,180], flat:[-93,30,297,114], back:[133,33,265,196], fold:[-39,40,239,89]},
-};
-const birds = [];
-function makeBird(host, scale, opts = {}) {
-  const el = host || document.createElement('div');
-  el.classList.add('bird');
-  el.style.width = 370 * scale + 'px'; el.style.height = 240 * scale + 'px';
-  const img = (n, [x, y, w, h]) => `<img src="bird_${n}.png" alt="" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px">`;
-  el.innerHTML = `<div class="in" style="transform:scale(${scale})">
-    <span class="lf">${img('legs_fly', P.legs.fly)}</span><span class="ls">${img('legs_stand', P.legs.stand)}</span>
-    ${img('body', [0, 0, 370, 185])}
-    <span class="w">${['up','flat','back'].map(w => img('wing_' + w, P.wing[w])).join('')}</span>
-    <span class="wf">${img('wing_fold', P.wing.fold)}</span>
-    ${opts.carry ? '<div class="carry m"><i>x</i></div>' : ''}</div>`;
-  const b = {el, flying: true, t0: Math.random() * 10,
-    wings: el.querySelectorAll('.w img'), lf: el.querySelector('.lf'), ls: el.querySelector('.ls'), wf: el.querySelector('.wf'), carry: el.querySelector('.carry'),
-    set(fly) { this.flying = fly; this.lf.style.display = fly ? '' : 'none'; this.ls.style.display = fly ? 'none' : ''; this.wf.style.display = fly ? 'none' : '';
-      if (!fly) this.wings.forEach(w => w.style.opacity = 0); }};
-  b.set(opts.fly !== false);
-  birds.push(b);
-  return b;
-}
-const cyc = [0, 1, 2, 1];
-function flapLoop(t) {
-  for (const b of birds) {
-    if (!b.flying) continue;
-    const p = ((t / 1000 + b.t0) / 0.4 % 1) * 4, i = Math.floor(p), f = p - i;
-    const m = f < .3 ? 0 : (f - .3) / .7, w = m * m * (3 - 2 * m);
-    b.wings.forEach((img, k) => img.style.opacity = 0);
-    b.wings[cyc[i]].style.opacity = 1 - w;
-    b.wings[cyc[(i + 1) % 4]].style.opacity = Math.max(+b.wings[cyc[(i + 1) % 4]].style.opacity, w);
-  }
-  requestAnimationFrame(flapLoop);
-}
-requestAnimationFrame(flapLoop);
-makeBird($('#heroBird'), innerWidth < 480 ? .3 : .38);
-makeBird($('#finalBird'), .36, {carry: true});
-
-/* ---------- math: polynomials with fractions ---------- */
-const gcd = (a, b) => b ? gcd(b, a % b) : Math.abs(a);
-const F = (n, d = 1) => { if (d < 0) { n = -n; d = -d; } const g = gcd(n, d) || 1; return {n: n / g, d: d / g}; };
-const fadd = (a, b) => F(a.n * b.d + b.n * a.d, a.d * b.d);
-const fmul = (a, b) => F(a.n * b.n, a.d * b.d);
-const norm = poly => { const m = new Map(); for (const t of poly) { const c = m.get(t.p); m.set(t.p, c ? fadd(c, t.c) : t.c); }
-  return [...m].filter(([, c]) => c.n !== 0).map(([p, c]) => ({p, c})).sort((a, b) => b.p - a.p); };
-const mulx = a => a.length ? a.map(t => ({p: t.p + 1, c: t.c})) : [{p: 1, c: F(1)}];
-const add1 = a => norm([...a, {p: 0, c: F(1)}]);
-const deriv = a => norm(a.filter(t => t.p > 0).map(t => ({p: t.p - 1, c: fmul(t.c, F(t.p))})));
-const integ = a => a.map(t => ({p: t.p + 1, c: fmul(t.c, F(1, t.p + 1))}));
-const val = (a, x) => a.reduce((s, t) => s + t.c.n / t.c.d * x ** t.p, 0);
-function tex(a) {
-  if (!a.length) return '0';
-  return a.map((t, k) => {
-    const neg = t.c.n < 0, n = Math.abs(t.c.n), d = t.c.d;
-    let s = k ? (neg ? ' − ' : ' + ') : (neg ? '−' : '');
-    const xs = t.p === 0 ? '' : t.p === 1 ? '<i>x</i>' : `<i>x</i><sup>${t.p}</sup>`;
-    const coef = d !== 1 ? `<span class="frac sm"><span>${n}</span><span>${d}</span></span>` : (n === 1 && t.p > 0 ? '' : n);
-    return s + coef + xs;
-  }).join('');
-}
-const fmt = v => { const r = Math.round(v * 100) / 100; return Math.abs(r) >= 1e4 ? Math.floor(r).toLocaleString() : r.toLocaleString(undefined, {maximumFractionDigits: 2}); };
-
-/* ---------- demo game ---------- */
-const COLORS = ['var(--lav)', 'var(--mint)', 'var(--peach)', 'var(--sky)'];
-const CARDS = {
-  X: {html: '<i>x</i>', tag: '× x', w: 6},
-  ONE: {html: '1', tag: '+ 1', w: 4},
-  D: {html: '<span class="frac"><span><i>d</i></span><span><i>dx</i></span></span>', tag: 'ぜんぶ微分', w: 3, global: true, cls: 'g'},
-  I: {html: '∫', tag: '1マス積分', w: 2},
-  F1: {html: '<span style="font-size:.8em"><i>f</i>(1)</span>', tag: '収穫', w: 2, global: true, cls: 'h'},
-};
-const TOTAL = 12;
-let G;
-const slotsEl = $('#slots'), handEl = $('#hand');
-
-function reset() {
-  G = {field: [[{p: 1, c: F(1)}], [{p: 0, c: F(1)}], [], []], hand: [], sel: null, score: 0, left: TOTAL, used: 0, golden: null, busy: false};
-  G.hand = [deal(), deal(), deal()];
-  G.hand[0] = 'X'; G.hand[1] = 'D';
-  $('#over').classList.remove('on');
-  render(true); hint('カードをえらんでね');
-}
-function deal() {
-  const g = G.hand.filter(c => c && CARDS[c].global).length;
-  const pool = Object.entries(CARDS).filter(([k, c]) => !(g >= 2 && c.global));
-  let r = Math.random() * pool.reduce((s, [, c]) => s + c.w, 0);
-  for (const [k, c] of pool) { if ((r -= c.w) < 0) return k; }
-  return 'X';
-}
-const slotVal = (i, x) => val(G.field[i], x) * (G.golden === i ? 10 : 1);
-const total = x => G.field.reduce((s, _, i) => s + slotVal(i, x), 0);
-
-function render(dealAll, changed = []) {
-  $('#score').textContent = fmt(G.score);
-  $('#left').textContent = String(G.left);
-  $('#round').textContent = String(G.used + 1).padStart(2, '0');
-  const parts = G.field.map((a, i) => a.length ? (G.golden === i ? '10(' + tex(a) + ')' : tex(a)) : null).filter(Boolean);
-  $('#fx').innerHTML = '<i>f</i>(<i>x</i>) = ' + (parts.length ? parts.join(' + ').replace(/\+ −/g, '− ') : '0');
-  $('#v1').textContent = fmt(total(1)); $('#v2').textContent = fmt(total(2));
-  slotsEl.innerHTML = '';
-  G.field.forEach((a, i) => {
-    const w = document.createElement('div'); w.className = 'slotwrap';
-    const s = document.createElement('div');
-    s.className = 'slot m' + (a.length ? '' : ' empty') + (G.golden === i ? ' gold' : '') + (canPlace(G.sel, i) ? ' target' : '') + (changed.includes(i) ? ' boing' : '');
-    if (a.length) { s.style.background = COLORS[i]; s.innerHTML = '<span>' + tex(a) + '</span>'; const L = a.length; s.style.fontSize = (L === 1 ? (a[0].c.d > 1 ? 18 : 25) : L === 2 ? 16 : L === 3 ? 13 : 11) * (innerWidth < 480 ? .85 : 1) + 'px'; }
-    s.onclick = () => tapSlot(i);
-    w.appendChild(s);
-    if (G.golden === i) w.insertAdjacentHTML('beforeend', `<svg class="badge10" viewBox="-32 -32 64 64"><path d="${BURST}" fill="#e0573e"/><text x="0" y="6" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="17" fill="#fff">×10</text></svg>`);
-    slotsEl.appendChild(w);
-  });
-  handEl.innerHTML = '';
-  G.hand.forEach((c, i) => {
-    const d = document.createElement('div');
-    const info = CARDS[c];
-    d.className = 'card m' + (info.cls ? ' ' + info.cls : '') + (G.sel === i ? ' sel' : '') + ((dealAll || G.fresh === i) ? ' deal' : '');
-    d.innerHTML = `<span>${info.html}</span><span class="tag">${info.tag}</span>`;
-    d.onclick = () => tapCard(i);
-    handEl.appendChild(d);
-  });
-  G.fresh = null;
-}
-function canPlace(sel, i) {
-  if (sel == null) return false;
-  const c = G.hand[sel];
-  if (CARDS[c].global) return false;
-  if (c === 'I') return G.field[i].length > 0;
-  return true;
-}
-function hint(t) { $('#hint').textContent = t; }
-let tt;
-function toast(t) { const el = $('#toast'); el.textContent = t; el.classList.add('on'); clearTimeout(tt); tt = setTimeout(() => el.classList.remove('on'), 1500); }
-
-function tapCard(i) {
-  if (G.busy || G.left <= 0) return;
-  const c = G.hand[i];
-  if (c === 'D') return play(i, () => { G.field = G.field.map(deriv); toast('微分！ ぜんぶのマスが変わった'); return [0, 1, 2, 3]; });
-  if (c === 'F1') return play(i, harvest);
-  G.sel = G.sel === i ? null : i;
-  render();
-  hint(G.sel == null ? 'カードをえらんでね' : (c === 'I' ? '積分するマスをタップ' : 'マスをタップ'));
-}
-function tapSlot(i) {
-  if (G.busy) return;
-  if (G.sel == null) { hint('先にカードをえらんでね'); return; }
-  if (!canPlace(G.sel, i)) { toast('0の積分は0。関数のあるマスへ'); return; }
-  const c = G.hand[G.sel];
-  play(G.sel, () => {
-    const a = G.field[i];
-    G.field[i] = c === 'X' ? mulx(a) : c === 'ONE' ? add1(a) : integ(a);
-    return [i];
-  });
-}
-function harvest() {
-  const v = total(1);
-  const live = G.field.map((a, i) => [i, a.length ? slotVal(i, 1) : -Infinity]).filter(([, x]) => x > -Infinity);
-  if (!live.length) { toast('収穫するものがない…'); return []; }
-  const [big] = live.reduce((m, x) => x[1] > m[1] ? x : m);
-  G.score += v;
-  G.field[big] = [];
-  if (G.golden === big) G.golden = null;
-  toast(`収穫！ +${fmt(v)}`);
-  bumpScore();
-  return [];
-}
-function bumpScore() { const s = $('#score'); s.classList.remove('boing'); void s.offsetWidth; s.classList.add('boing'); }
-async function play(hi, fn) {
-  const changed = fn();
-  G.sel = null; G.left--; G.used++;
-  G.hand[hi] = deal(); G.fresh = hi;
-  render(false, changed);
-  hint('カードをえらんでね');
-  if (G.left <= 0) { setTimeout(end, 900); return; }
-  if (G.used === 3) await birdEvent();
-  if (G.used === 6) goldEvent();
-}
-function goldEvent() {
-  const empties = G.field.map((a, i) => a.length ? -1 : i).filter(i => i >= 0);
-  if (!empties.length || G.golden != null) return;
-  G.golden = empties[Math.floor(Math.random() * empties.length)];
-  render(false, [G.golden]);
-  toast('黄金マス出現！ ×10');
-  hint('黄金マスで育てると、値が10倍');
-}
-function end() {
-  $('#final').textContent = fmt(G.score);
-  $('#over').classList.add('on');
-}
-$('#again').onclick = reset;
-
-/* bird flies in and drops x on a slot */
-function birdEvent() {
-  return new Promise(res => {
-    if (reduce) { res(); return; }
-    G.busy = true;
-    const board = $('#board');
-    const i = Math.floor(Math.random() * 4);
-    const s = 0.24 * (innerWidth < 480 ? .85 : 1);
-    const holder = document.createElement('div'); holder.className = 'flyBird'; board.appendChild(holder);
-    const b = makeBird(holder, s, {carry: true});
-    const br = board.getBoundingClientRect(), sr = slotsEl.children[i].getBoundingClientRect();
-    const tx = sr.left - br.left + sr.width / 2 - 194 * s, ty = sr.top - br.top - 228 * s + 6;
-    toast('小鳥が x を運んできた！');
-    // 描画が止まっている（タブが裏にある等）ときでも、遊べなくならないようにする
-    let done = false;
-    const finish = dropped => { if (done) return; done = true; if (!dropped) { G.field[i] = mulx(G.field[i]); render(false, [i]); }
-      board.querySelectorAll('.dropX').forEach(e => e.remove()); G.busy = false; res(); };
-    setTimeout(() => { if (!done) { holder.remove(); birds.splice(birds.indexOf(b), 1); finish(false); } }, 4000);
-    const fly = holder.animate([{transform: `translate(${-200}px, ${ty - 120}px)`}, {transform: `translate(${tx}px, ${ty}px)`}], {duration: 1100, easing: 'cubic-bezier(.2,.7,.3,1)', fill: 'forwards'});
-    fly.onfinish = () => {
-      b.set(false);
-      // drop the x
-      b.carry.style.visibility = 'hidden';
-      const x = document.createElement('div'); x.className = 'dropX m'; x.innerHTML = '<i>x</i>'; board.appendChild(x);
-      const sx = tx + 338 * s + 4, sy = ty + 58 * s, ex = sr.left - br.left + sr.width / 2 - 20, ey = sr.top - br.top + sr.height / 2 - 24;
-      x.animate([{transform: `translate(${sx}px,${sy}px) rotate(12deg) scale(.7)`, opacity: 1}, {transform: `translate(${ex}px,${ey}px) rotate(0) scale(.9)`, opacity: 1, offset: .8}, {transform: `translate(${ex}px,${ey}px) scale(.3)`, opacity: 0}], {duration: 620, easing: 'ease-in', fill: 'forwards'}).onfinish = () => {
-        x.remove();
-        if (done) return;
-        G.field[i] = mulx(G.field[i]);
-        render(false, [i]);
-        setTimeout(() => {
-          b.set(true);
-          const away = holder.animate([{transform: `translate(${tx}px, ${ty}px)`}, {transform: `translate(${br.width + 60}px, ${ty - 220}px)`}], {duration: 1000, easing: 'cubic-bezier(.5,0,.8,.6)', fill: 'forwards'});
-          away.onfinish = () => { holder.remove(); birds.splice(birds.indexOf(b), 1); };
-          finish(true);
-        }, 350);
-      };
-    };
-  });
-}
-
-reset();
-})();
-</script>
+<footer><a href="https://takayan1224.github.io/function-pop/">公式サイト</a> ／ <a href="privacy.html">プライバシーポリシー</a> ／ © 2026 function Pop</footer>
+</div>
 </body>
 </html>
